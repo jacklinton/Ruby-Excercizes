@@ -17,7 +17,7 @@ class Robot
 
 	def list_friends
 		puts "My friends are "
-		if status == true
+		if @@status == true
 			friends.each do |fellas|  
 				puts fellas
 			end
@@ -30,7 +30,7 @@ class Robot
 
 	def self.kill_all_humans
 		puts "Kill all humans... must... kill  all humans..."
-	
+		@@status = false
 	end
 end
 
@@ -49,7 +49,11 @@ botto.make_friend("Hermione")
 botto.make_friend("Ron")
 botto.make_friend("Draco")
 
+
 botty.list_friends
+
+Robot.kill_all_humans
+
 
 botto.list_friends
 
