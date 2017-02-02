@@ -1,43 +1,42 @@
-Basic Ruby Functions
-Goal:
+#1. Concatenate a string
 
-Build Familiarity with Ruby syntax and conventions.
+def in_America(str)
+	p str + " only in America!"
+end
 
-Assignment:
+#2. Find the max
 
-Create the following functions:
+def find_max(arry)
+	max = arry[0]
+	for i in 1..(arry.length-1)
+		if max < arry[i]
+			max = arry[i]	
+		else
+			max
+		end
+	end
+	p max
+end
 
-Create a function that takes a string as an argument and adds the phrase "Only in America!" to the end of it
-Create a function to find the maximum value in an array of numbers. For instance: [100,10,-1000] should return 100. Do not use Ruby's built-in .max function.
+#3. Combine 2 arrays into  a hash
+def combine_array(arr1, arr2)
+	hashy = Hash.new
+	for i in 0..(arr1.length-1)
+		hashy.store(arr1[i], arr2[i])
+	end
+	p hashy
+end
 
-Create a function that takes two arguments - both of them arrays. Inside of the function, combine the arrays using the items from the first array as keys and the second array as values. For example, when these two arrays are supplied as arguments:
 
-    [:toyota, :tesla]
-    ["Prius", "Model S"]
-they should return a hash like so:
 
-    {toyota: "Prius", tesla: "Model S"}
-Write a program that prints the numbers from 1 to 100, except:
+in_America("Everyone goes fishing")
 
-for multiples of three print "Fizz" instead of the number
-for multiples of five print "Buzz"
-Print "FizzBuzz" for numbers that are multiples of both 3 and 5.
-Grading Criteria:
+arry = [75, -300, 4, 7, 22, 84, 99, 10000, 45, -22, -1000]
 
-Build Only in America function in Ruby, with no errors
+find_max(arry)
 
-Build FizzBuzz in Ruby, with no errors
+arr1 = ["E", "V", "X", "R", "Y"]
+arr2 = ["L", "E", "T", "Y", "R"]
 
-Build Nested Arrays function in Ruby, with no errors
+combine_array(arr1, arr2)
 
-Code is well commented
-
-The syntax is correct and the code is indented properly.
-
-All scripts should output the expected result.
-
-Ruby's built-in .max function is not used
-
-Complete = Meets above grading criteria.
-
-Incomplete = Does not meet grading criteria. Needs improvement or missing submission.
