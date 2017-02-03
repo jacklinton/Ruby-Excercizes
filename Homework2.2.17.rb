@@ -27,6 +27,20 @@ def combine_array(arr1, arr2)
 	p hashy
 end
 
+#4. FizzBuzz
+def fizzbuzz 
+	for i in 1..100
+		if i%3==0 && i%5!=0
+			puts "Fizz"
+		elsif i%5==0 && i%3!=0
+			puts "Buzz"
+		elsif i%3 == 0 && i%5 == 0
+			puts "FizzBuzz"
+		else
+			puts i
+		end
+	end
+end
 
 
 in_America("Everyone goes fishing")
@@ -40,3 +54,4 @@ arr2 = ["L", "E", "T", "Y", "R"]
 
 combine_array(arr1, arr2)
 
+fizzbuzz
